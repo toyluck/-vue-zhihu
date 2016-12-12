@@ -38,7 +38,8 @@
   import Vue from 'vue' 
   export default{
     components:{
-       'basemodal': BaseModal
+      // 不使用时可以打开 modal,或者改其他名称也可以
+      //  'basemodal': BaseModal
     },
     beforeCreate: function () {
         this.$options.components.BaseModal = require('./BaseModal.vue')

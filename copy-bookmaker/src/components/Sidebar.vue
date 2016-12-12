@@ -41,25 +41,21 @@
     <category-modal v-if='isCategoryShow'
                     v-on:closecategorymodal='closeCategoryModal'
     >
-
-    </category-modal>
+    </category-modal> 
   </div>
 </template>
-<style scoped>
-    body{
-        background-color:#ffff00;
-    }
-.btn_del{
-visibility:hidden;
-}
-.btn_del:hover{
-visibility:visible;
-} 
+<style scoped >
+   
+   .content{
+     background:inherit;
+     padding:.15em;
+   }
  
 </style>
 <script >
   import   store, { eventBusVue }  from '../store/index'
   import CategoryModal from './CategoryModal.vue'
+  import BookmarkModal from './BookmarkModal.vue'
   export default{
     components: {
       CategoryModal

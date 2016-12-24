@@ -2,7 +2,11 @@
     <div id="app">
         <headerbar></headerbar>
         <router-link to='/' exact></router-link>
-        <router-view></router-view>
+        <transition>
+            <keep-live>
+                <router-view></router-view>
+            </keep-live>
+        </transition>
     </div>
 </template>
 
@@ -42,7 +46,8 @@
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
     }
 
     @media all and(max-width: 1550px) {

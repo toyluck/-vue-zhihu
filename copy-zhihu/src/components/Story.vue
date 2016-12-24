@@ -5,16 +5,12 @@
     .story-img-place-holder {
         height: 300px;
         width: 100vh;
-        top: -100px;
-        position: absolute;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover
     }
 
-    .story-container {
-        position: relative;
-    }
+
 </style>
 
 <template>
@@ -23,7 +19,6 @@
 
         </div>
         <!--<img :src='topImg' id="topImg">-->
-
         <div v-html="story.body" id="story-content">
 
         </div>
@@ -31,7 +26,10 @@
     </div>
 </template>
 <script type='text/babel'>
+    import latest from '../data/latest.js'
+    
 
+    
     export default{
         data(){
             return {
